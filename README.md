@@ -1,25 +1,24 @@
 # Facebook AI Agent Assistant
 
-Tự động tạo và đăng bài Facebook sử dụng AI Agent framework (autogen), tích hợp tìm kiếm tin tức mới nhất từ internet (DuckDuckGo), tối ưu cho Digital Marketing và xây dựng thương hiệu.
+Automatically generate and post Facebook content using the AI Agent framework (autogen), integrated with the latest news search from the internet (DuckDuckGo), optimized for Digital Marketing and brand building.
 
-## 🚀 Tính năng nổi bật
+## 🚀 Key Features
 
-- **Tự động viết & đăng bài Facebook**: AI Agent tự động lấy tin tức mới nhất về AI, marketing, công nghệ, sáng tạo... từ internet, tổng hợp và đăng bài lên fanpage.
-- **Tích hợp Agent framework autogen**: Sử dụng autogen-agentchat để xây dựng Assistant Agent, tự động hóa quy trình lấy tin, viết bài, đăng bài.
-- **Tìm kiếm tin tức bằng DuckDuckGo**: Sử dụng thư viện `ddgs` để lấy tin tức mới nhất, lọc domain, trích xuất nội dung và ảnh minh họa.
-- **Tùy biến nội dung**: Bài viết được định dạng nổi bật, nhấn mạnh các từ khóa, tự động chèn thông tin liên hệ, tagline thương hiệu.
-- **Chạy tự động theo lịch (GitHub Actions)**: Có thể cấu hình chạy định kỳ (2 lần/ngày) hoặc chạy thủ công.
+- **Automatic Facebook Post Creation & Publishing**: The AI Agent automatically fetches the latest news about AI, marketing, technology, creativity, etc. from the internet, summarizes, and posts to your fanpage.
+- **Integrated with Agent framework autogen**: Uses autogen-agentchat to build an Assistant Agent, automating the process of fetching news, writing, and posting content.
+- **News search via DuckDuckGo**: Utilizes the `ddgs` library to fetch the latest news, filter domains, extract content and images.
+- **Customizable Content**: Posts are formatted with bold highlights, key phrases, and automatically include contact info and brand tagline.
 
-## 🛠️ Cài đặt
+## 🛠️ Installation
 
-1. **Clone repo & cài đặt thư viện**
+1. **Clone the repo & install dependencies**
    ```bash
    git clone <repo-url>
    cd push_github
    pip install -r requirements.txt
    ```
 
-2. **Tạo file `.env` với các biến sau:**
+2. **Create a `.env` file with the following variables:**
    ```
    FB_ACCESS_TOKEN=...
    PAGE_ID=...
@@ -27,58 +26,58 @@ Tự động tạo và đăng bài Facebook sử dụng AI Agent framework (auto
    MODEL=...
    BLOCKED_DOMAINS=...
    ```
-   - `FB_ACCESS_TOKEN`, `PAGE_ID`: Lấy từ Facebook Developer (Graph API).
-   - `GITHUB_TOKEN`: Token cho Azure AI model (nếu dùng Azure).
-   - `MODEL`: Tên model AI (ví dụ: gpt-4, gpt-3.5-turbo...).
-   - `BLOCKED_DOMAINS`: (Tùy chọn) Danh sách domain không muốn lấy tin.
+   - `FB_ACCESS_TOKEN`, `PAGE_ID`: Obtain from Facebook Developer (Graph API).
+   - `GITHUB_TOKEN`: Token for Azure AI model (if using Azure).
+   - `MODEL`: AI model name (e.g., gpt-4, gpt-3.5-turbo...).
+   - `BLOCKED_DOMAINS`: (Optional) List of domains to exclude from news search.
 
-## ⚡️ Cách chạy thủ công
+## ⚡️ Manual Run
 
 ```bash
 python fb_post.py
 ```
-- Agent sẽ tự động lấy tin, tổng hợp, viết bài và đăng lên Facebook Page.
+- The agent will automatically fetch news, summarize, write, and post to your Facebook Page.
 
-## 🧠 Cách hoạt động
+## 🧠 How It Works
 
-1. **Agent Assistant** (dùng autogen-agentchat) sẽ:
-   - Gọi tool `get_news_internet` để lấy tin tức mới nhất từ DuckDuckGo.
-   - Tổng hợp, viết lại nội dung hấp dẫn, nhấn mạnh thương hiệu, chèn thông tin liên hệ.
-   - Gọi tool `post_facebook` để đăng bài lên fanpage.
-   - Kết thúc bằng thông điệp "THANKS_NE" (theo quy trình autogen).
+1. **Agent Assistant** (using autogen-agentchat) will:
+   - Call the `get_news_internet` tool to fetch the latest news from DuckDuckGo.
+   - Summarize and rewrite the content in an engaging way, highlight the brand, and add contact info.
+   - Call the `post_facebook` tool to publish the post to the fanpage.
+   - End with the message "THANKS_NE" (as per autogen workflow).
 
-2. **Tìm kiếm & trích xuất tin tức**:
-   - Dùng DuckDuckGo (`ddgs`) để lấy các bài báo mới nhất.
-   - Lọc domain không mong muốn.
-   - Trích xuất tiêu đề, đoạn văn, ảnh lớn nhất từ bài báo.
+2. **News Fetching & Extraction**:
+   - Uses DuckDuckGo (`ddgs`) to get the latest articles.
+   - Filters out unwanted domains.
+   - Extracts the title, main paragraphs, and the largest image from the article.
 
-3. **Định dạng & đăng bài**:
-   - Tự động làm đậm các từ khóa (**bold**).
-   - Chèn tagline, thông tin liên hệ, nguồn tin.
-   - Đăng bài kèm ảnh lên Facebook qua Graph API.
+3. **Formatting & Posting**:
+   - Automatically bolds key phrases (**bold**).
+   - Adds tagline, contact info, and news source.
+   - Posts with image to Facebook via Graph API.
 
-## 🖥️ Chạy tự động với GitHub Actions
+## 🖥️ Automated Run with GitHub Actions
 
-- Đã cấu hình sẵn workflow trong `fb_agent.yml` để chạy định kỳ hoặc thủ công trên GitHub Actions.
-- Cần cấu hình các secrets tương ứng trong repo GitHub:
+- Pre-configured workflow in `fb_agent.yml` to run periodically or manually via GitHub Actions.
+- You need to set up the following secrets in your GitHub repo:
   - `FB_ACCESS_TOKEN`, `PAGE_ID`, `GITHUB_TOKEN`, `MODEL`, `BLOCKED_DOMAINS`, `VERIFY_TOKEN`
 
-## 📦 Thư viện sử dụng
+## 📦 Dependencies
 
-- `autogen-agentchat`, `autogen-ext[azure]`: Xây dựng AI Agent, tích hợp Azure AI.
-- `ddgs`: Tìm kiếm tin tức DuckDuckGo.
-- `requests`, `beautifulsoup4`: Gửi request, trích xuất nội dung web.
-- `python-dotenv`: Quản lý biến môi trường.
-- `Pillow`: Xử lý ảnh.
-- `aiohttp`: Hỗ trợ async.
+- `autogen-agentchat`, `autogen-ext[azure]`: Build AI Agent, integrate with Azure AI.
+- `ddgs`: DuckDuckGo news search.
+- `requests`, `beautifulsoup4`: HTTP requests, web content extraction.
+- `python-dotenv`: Environment variable management.
+- `Pillow`: Image processing.
+- `aiohttp`: Async support.
 
-## 📄 Cấu trúc file chính
+## 📄 Main Files Structure
 
-- `fb_post.py`: Code chính, định nghĩa Agent, tool, logic lấy tin, đăng bài.
-- `fb_agent.yml`: Workflow GitHub Actions.
-- `requirements.txt`: Danh sách thư viện.
+- `fb_post.py`: Main code, defines the Agent, tools, news fetching, and posting logic.
+- `fb_agent.yml`: GitHub Actions workflow.
+- `requirements.txt`: List of dependencies.
 
-## 📬 Liên hệ
+## 📬 Contact
 
 - 📧 Email: quynhsydaole@gmail.com
 - 📺 YouTube: https://www.youtube.com/@QuynhBuiOffical 
