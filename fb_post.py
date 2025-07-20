@@ -23,14 +23,13 @@ class Agent_Post_FB():
         self.input_message = INPUT_MESSAGE
         self.system_message = SYSTEM_MESSAGE
         self.image_url = "" 
-        
         self.PAGE_ID = os.getenv("PAGE_ID")
         self.FB_ACCESS_TOKEN = os.getenv("FB_ACCESS_TOKEN")
         self.post_url = f"https://graph.facebook.com/v23.0/{self.PAGE_ID}/photos"
         self.model_client = AzureAIChatCompletionClient(
             model=os.getenv("MODEL"),
             endpoint="https://models.inference.ai.azure.com",
-            credential=AzureKeyCredential(os.getenv("TOKEN")),
+            credential=AzureKeyCredential(os.getenv("GITHUB_TOKEN")),
             model_info={
                 "json_output": False,
                 "function_calling": True,
