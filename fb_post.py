@@ -155,23 +155,9 @@ class Agent_Post_FB():
 
 async def main():
     fb = Agent_Post_FB()
-    # print(fb.get_news_internet("Marketing bằng AI, Facebook AI Agent Assistant, sáng tạo công nghệ với AI, ứng dụng AI trong chuyển đổi số, trí tuệ nhân tạo"))
     await fb.run()
-    # print(fb.post_facebook("HEHEE 2"))
-    # print(fb.extract_text_from_url(url="https://vietnamnet.vn/ung-dung-200-usd-thang-lam-thay-ca-phong-ai-co-cuop-viec-nhan-su-du-lich-2391204.html"))
-
 
 if __name__ == "__main__":
     import asyncio
     asyncio.run(main=main())
     
-
-
-
-# from dotenv import load_dotenv
-# load_dotenv()
-# import os
-# PAGE_ID = os.getenv("PAGE_ID")
-# FB_ACCESS_TOKEN = os.getenv("FB_ACCESS_TOKEN")
-
-# print(PAGE_ID, " - ", FB_ACCESS_TOKEN)
