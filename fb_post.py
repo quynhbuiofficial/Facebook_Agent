@@ -30,7 +30,7 @@ class Agent_Post_FB():
         self.model_client = AzureAIChatCompletionClient(
             model=os.getenv("MODEL"),
             endpoint="https://models.inference.ai.azure.com",
-            credential=AzureKeyCredential(os.environ["GITHUB_TOKEN"]),
+            credential=AzureKeyCredential(os.environ["TOKEN"]),
             model_info={
                 "json_output": False,
                 "function_calling": True,
