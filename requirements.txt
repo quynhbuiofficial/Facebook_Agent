@@ -1,0 +1,7 @@
+requests
+python-dotenv
+autogen-agentchat==0.6.1
+autogen-ext[azure]
+beautifulsoup4
+aiohttp
+ddgs
