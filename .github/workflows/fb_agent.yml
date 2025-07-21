@@ -3,9 +3,8 @@ name: Facebook Agent
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 1 * * *'
-    - cron: '15 1,13 * * *'
-    - cron: '0 13 * * *'
+    - cron: '0,19 1 * * *'     # 08:00 & 08:15 sáng (giờ VN)
+    - cron: '0 13 * * *'    # 20:00 tối (giờ VN)
   
 jobs:
   agent-fb-posting:
