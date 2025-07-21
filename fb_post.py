@@ -55,11 +55,23 @@ class Agent_Post_FB():
 
     def post_facebook(self, post_content: str):
         formatted_content = self.format_bold_sections(post_content)
-        payload = {
-            "message": formatted_content,
-            "access_token": self.FB_ACCESS_TOKEN,
-            "url": self.image_url 
-        }
+        if self.image_url:
+            payload = {
+                "message": formatted_content,
+                "access_token": self.FB_ACCESS_TOKEN,
+                "url": self.image_url 
+            }
+        else:
+            payload = {
+                "message": formatted_content,
+                "access_token": self.FB_ACCESS_TOKEN,
+                "url": "https://cdn.pixabay.com/photo/2024/11/13/09/36/ai-9193995_1280.jpg"
+            }
+        # payload = {
+        #     "message": formatted_content,
+        #     "access_token": self.FB_ACCESS_TOKEN,
+        #     "url": self.image_url 
+        # }
         r = requests.post(self.post_url, data=payload)
         return str(r.text)
     
