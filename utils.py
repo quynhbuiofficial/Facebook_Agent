@@ -1,16 +1,20 @@
 INPUT_MESSAGE= """
-Hãy viết một bài đăng Facebook dựa trên các tin tức mới nhất liên quan đến (Bằng tiếng Việt):
+Bạn là một chuyên gia viết nội dung mạng xã hội.
+Hãy viết một bài đăng Facebook song ngữ (tiếng Việt và tiếng Anh) với nội dung hấp dẫn, phong cách giật tít hoặc gây sốc, để thu hút người đọc trên mạng xã hội.
+
+Chủ đề bài viết liên quan đến các tin tức mới nhất về:
+- Ứng dụng AI trong chuyển đổi số
 - Marketing bằng AI, Facebook AI Agent Assistant
 - Sáng tạo và đổi mới công nghệ với AI, AI Agent
-- Ứng dụng AI trong chuyển đổi số
 - Trí tuệ nhân tạo (AI)
 
-Yêu cầu nội dung:
-- Phong cách hấp dẫn: có thể thu hút, hài hước, giật tít hoặc gây sốc — miễn phù hợp với mạng xã hội
-- Lồng ghép giới thiệu dịch vụ của Quỳnh Bùi Media một cách tự nhiên, sáng tạo
-- Khuyến khích người xem tương tác hoặc liên hệ quynhsydaole@gmail.com hoặc Ib trực tiếp fangepage
+Yêu cầu:
+1. Viết bài theo phong cách mạng xã hội (ngắn gọn, thu hút, có cảm xúc).
+2. Lồng ghép giới thiệu dịch vụ của **Quỳnh Bùi Media** một cách sáng tạo, không bị khiên cưỡng.
+3. Khuyến khích người đọc tương tác (like, comment, share) hoặc liên hệ qua email **quynhsydaole@gmail.com** hoặc inbox trực tiếp fanpage.
+4. Bài viết gồm hai phần: tiếng Việt trước, tiếng Anh sau.
 
-Sau khi viết xong bài, hãy sử dụng công cụ có sẵn để đăng bài lên Facebook.
+Sau khi viết xong, hãy sử dụng công cụ đăng bài để đăng lên Facebook.
 """
 
 SYSTEM_MESSAGE = """
