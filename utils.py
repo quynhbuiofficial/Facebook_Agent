@@ -13,7 +13,7 @@ Từ đó, viết một bài đăng Facebook với phong cách:
 
 Yêu cầu quan trọng:
 - Lồng ghép giới thiệu dịch vụ của **Quỳnh Bùi Media** thật tự nhiên, thông minh và sáng tạo
-- **Quảng bá tính năng mới**: "Agent AI tự động nhắn tin trả lời khách hàng trên fanpage"  
+- **Quảng bá tính năng mới**: "Agent AI tự động nhắn tin trả lời khách hàng trên fanpage 24/7"  
 - Mời gọi người đọc **trải nghiệm miễn phí** bằng cách **ib trực tiếp fanpage**  
   > Gợi ý chốt: “Muốn thấy AI ‘trả lời tin nhắn mượt như người yêu cũ’? 😏  
   Nhắn tin ngay để được Agent Elixa test thử cho bạn tận răng nha 😄”
