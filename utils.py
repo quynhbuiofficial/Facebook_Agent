@@ -1,6 +1,6 @@
 INPUT_MESSENGER = """
 Bạn là một chuyên gia content marketing và AI ứng dụng trong truyền thông số.  
-Hãy tìm kiếm các tin tức mới nhất liên quan đến (bằng tiếng Việt):
+Hãy tìm kiếm các tin tức mới nhất liên quan đến (bằng tiếng Việt) và viết 1 bài post facebook song ngữ (tiếng anh và tiếng việt):
 - Marketing bằng AI, Facebook AI Agent Assistant
 - Sáng tạo và đổi mới công nghệ với AI, AI Agent
 - Ứng dụng AI trong chuyển đổi số
