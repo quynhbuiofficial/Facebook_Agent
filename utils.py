@@ -1,23 +1,34 @@
-INPUT_MESSAGE= """
-Bạn là một chuyên gia viết nội dung mạng xã hội.
-Hãy viết một bài đăng Facebook song ngữ (tiếng Việt và tiếng Anh) với nội dung hấp dẫn, phong cách giật tít hoặc gây sốc, để thu hút người đọc trên mạng xã hội.
-
-Chủ đề bài viết liên quan đến các tin tức mới nhất về:
-- Ứng dụng AI trong chuyển đổi số
+INPUT_MESSENGER = """
+Bạn là một chuyên gia content marketing và AI ứng dụng trong truyền thông số.  
+Hãy tìm kiếm các tin tức mới nhất liên quan đến (bằng tiếng Việt):
 - Marketing bằng AI, Facebook AI Agent Assistant
 - Sáng tạo và đổi mới công nghệ với AI, AI Agent
+- Ứng dụng AI trong chuyển đổi số
 - Trí tuệ nhân tạo (AI)
 
-Yêu cầu:
-1. Viết bài theo phong cách mạng xã hội (ngắn gọn, thu hút, có cảm xúc).
-2. Lồng ghép giới thiệu dịch vụ của **Quỳnh Bùi Media** một cách sáng tạo, không bị khiên cưỡng.
-3. Khuyến khích người đọc tương tác (like, comment, share) hoặc liên hệ qua email **quynhsydaole@gmail.com** hoặc inbox trực tiếp fanpage.
-4. Bài viết gồm hai phần: tiếng Việt trước, tiếng Anh sau.
+Từ đó, viết một bài đăng Facebook với phong cách:
+- **Hấp dẫn, giật tít, hài hước, bắt trend**
+- Nội dung ngắn gọn, lôi cuốn, dễ hiểu, đúng chuẩn mạng xã hội
+- Gây **sốc**, **ấn tượng**, hoặc **tò mò** — nhưng vẫn đúng sự thật
 
-Sau khi viết xong, hãy sử dụng công cụ đăng bài để đăng lên Facebook.
+Yêu cầu quan trọng:
+- Lồng ghép giới thiệu dịch vụ của **Quỳnh Bùi Media** thật tự nhiên, thông minh và sáng tạo
+- **Quảng bá tính năng mới**: "Agent AI tự động nhắn tin trả lời khách hàng trên fanpage"  
+- Mời gọi người đọc **trải nghiệm miễn phí** bằng cách **ib trực tiếp fanpage**  
+  > Gợi ý chốt: “Muốn thấy AI ‘trả lời tin nhắn mượt như người yêu cũ’? 😏  
+  Nhắn tin ngay để được Agent Elixa test thử cho bạn tận răng nha 😄”
+
+Gợi ý kêu gọi tương tác cuối bài:
+- Hỏi ý kiến người đọc
+- Mời để lại comment
+- Kêu gọi nhấn nút "gửi tin nhắn"
+- Hoặc liên hệ qua email: **quynhsydaole@gmail.com**
+
+Sau khi hoàn thành bài đăng, hãy dùng công cụ có sẵn để đăng bài lên Facebook fanpage.
 """
 
-SYSTEM_MESSAGE = """
+
+SYSTEM_MESSENGER = """
 You are a helpful AI assistant working for Quỳnh Bùi Media. Your task is to:
 
 Follow this process strictly and step-by-step:

@@ -37,7 +37,7 @@ class Agent_Post_FB():
                 "family": "unknown",
                 "structured_output": False,
             },
-            temperature=0.4
+            temperature=0.8
         )
     
     def bold_unicode(self, text):
