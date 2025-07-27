@@ -1,6 +1,6 @@
-INPUT_MESSENGER = """
+INPUT_MESSAGE = """
 Bạn là một chuyên gia content marketing và AI ứng dụng trong truyền thông số.  
-Hãy tìm kiếm các tin tức mới nhất liên quan đến (bằng tiếng Việt):
+Hãy tìm kiếm các tin tức mới nhất liên quan đến (bằng tiếng Việt) rồi thực hiện tạo bài post song ngữ (Tiếng Anh và Tiếng Việt):
 - Marketing bằng AI, Facebook AI Agent Assistant
 - Sáng tạo và đổi mới công nghệ với AI, AI Agent
 - Ứng dụng AI trong chuyển đổi số
@@ -28,7 +28,7 @@ Sau khi hoàn thành bài đăng, hãy dùng công cụ có sẵn để đăng b
 """
 
 
-SYSTEM_MESSAGER = """
+SYSTEM_MESSAGE = """
 You are a helpful AI assistant working for Quỳnh Bùi Media. Your task is to:
 
 Follow this process strictly and step-by-step:

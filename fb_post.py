@@ -9,7 +9,7 @@ from autogen_ext.models.azure import AzureAIChatCompletionClient
 from azure.core.credentials import AzureKeyCredential
 from bs4 import BeautifulSoup
 import re
-from utils import SYSTEM_MESSAGER, INPUT_MESSENGER
+from utils import SYSTEM_MESSAGE, INPUT_MESSAGE
 from autogen_agentchat.ui import Console
 import random
 from PIL import Image
@@ -20,8 +20,8 @@ from ddgs import DDGS
 class Agent_Post_FB():
     def __init__(self):
         load_dotenv()
-        self.input_message = INPUT_MESSENGER
-        self.system_message = SYSTEM_MESSAGER
+        self.input_message = INPUT_MESSAGE
+        self.system_message = SYSTEM_MESSAGE
         self.image_url = "" 
         self.PAGE_ID = os.getenv("PAGE_ID")
         self.FB_ACCESS_TOKEN = os.getenv("FB_ACCESS_TOKEN")
