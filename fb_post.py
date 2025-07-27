@@ -9,7 +9,7 @@ from autogen_ext.models.azure import AzureAIChatCompletionClient
 from azure.core.credentials import AzureKeyCredential
 from bs4 import BeautifulSoup
 import re
-from utils import SYSTEM_MESSAGE, INPUT_MESSAGE
+from utils_post import SYSTEM_MESSAGE, INPUT_MESSAGE
 from autogen_agentchat.ui import Console
 import random
 from PIL import Image
